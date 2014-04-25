@@ -15,46 +15,11 @@ In this tutorial we will take one parent.html and i-frame page and try to send m
 
 First we will make parent.html which include
 
-
-<html>
-<head>
-<script type="text/javascript">
-window.addEventListener('message', receiveMessage, false);
-function receiveMessage(event)
-{
-
- alert("got message: "+event.data);
-
-}
-</script>
-</head>
-<title> Parent Page </title>
-<body>
-<iframe src="http://path/Iframe.html" width="500" height="500"></iframe>
-</body>
-
-</html>
  
 This basically run the iframe and the window.addEventListener take care of the postmessage call from iframe.html.
 
 Now make your Iframe.html page which include
 
-
-<html>
-<head>
-<script>
-function send(){
-	window.parent.postMessage('Hello Parent Frame!', '*');
-}
-</script>
-</head>
-<title> IFrame Test </title>
-<body>
-<h1> Welcome </h1>
-<p> Hello There </body>
-<button onclick = "send()">Send</button>
-</body>
-</html>
 
  This basically call the window.parent.postMessage() function when the user click on to send function and send the message 'Hello Parent Frame!'.
 
