@@ -1,0 +1,15 @@
+<html>
+<head>
+<script>
+function send(){
+	window.parent.postMessage('Hello Parent Frame!', '*');
+}
+</script>
+</head>
+<title> IFrame Test </title>
+<body>
+<h1> Welcome </h1>
+<p> Hello There </body>
+<button onclick = "send()">Send</button>
+</body>
+</html>
