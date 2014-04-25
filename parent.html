@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript">
+window.addEventListener('message', receiveMessage, false);
+function receiveMessage(event)
+{
+
+ alert("got message: "+event.data);
+
+}
+</script>
+</head>
+<title> Parent Page </title>
+<body>
+<iframe src="http://path/Iframe.html" width="500" height="500"></iframe>
+</body>
+
+</html>
